@@ -6,14 +6,14 @@ sidebar: widget
 navigation: widget
 
 strings:
-    productName:         ShopnoOS 2.2 (trixie)
+    productName:         ShopnoOS 2.3 (uday)
     shortProductName:    ShopnoOS GAMING
-    version:             2.2
-    shortVersion:        2.2
-    versionedName:       ShopnoOS 2.2
+    version:             2.3
+    shortVersion:        2.3
+    versionedName:       ShopnoOS 2.3
     shortVersionedName:  ShopnoOS GAMING
     bootloaderEntryName: ShopnoOS GAMING
-    productUrl:          https://dev.jadupc.com/builds/iso/ShopnoOS-Beta-amd64.hybrid.iso
+    productUrl:          https://jadupc.com/
     knownIssuesUrl:      https://github.com/fa-saikat/shopno-os/issues
 
 images:
