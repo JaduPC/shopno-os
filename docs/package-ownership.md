@@ -256,6 +256,12 @@ xfce4-systemload-plugin xfce4-terminal          xfce4-timer-plugin
 xfce4-wavelan-plugin    xfce4-weather-plugin    xfce4-xkb-plugin
 ```
 
+Font the xfce skel config sets for the UI and window titles:
+
+```
+fonts-inter
+```
+
 Bluetooth GUI frontend (the core stack is in base, CLI tools are in desktop):
 
 ```
