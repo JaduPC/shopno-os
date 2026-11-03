@@ -46,12 +46,14 @@ flavors/xfce/
 ├── hooks/
 │   └── chroot/
 │       ├── 9063-install-shopno-menu.hook.chroot # Installs Shopno Menu (start menu) from its release .deb
+│       ├── 9063-install-shopno-quicksettings.hook.chroot # Installs Shopno Quick Settings (quick settings + tray) from its release .deb
 │       ├── 9064-install-shopno-update-helper.hook.chroot # Installs Shopno Update Helper (apt + Flatpak updater) from its .deb
 │       ├── 9075-lightdm.hook.chroot     # Enables and configures LightDM
 │       └── 9080-default-apps.hook.chroot # Generates /etc/xdg/mimeapps.list
 ├── skel/                                # Copied to /etc/skel — user defaults
-│   └── .config/
-│       └── (XFCE per-user config files)
+│   ├── .config/
+│   │   └── (XFCE per-user config files)
+│   └── .local/share/xfce4-panel-profiles/ # Panel profiles offered in Panel Preferences
 └── README.md
 ```
 
@@ -77,6 +79,7 @@ The full XFCE4 shell plus the complete suite of panel plugins and supporting app
 | `xfce4-screenshooter` | Screenshot tool |
 | `tumbler` | Thumbnail service for Thunar |
 | `xfce4-panel-profiles` | Panel layout import/export |
+| `fonts-inter` | Inter, the UI and window title font the skel `xsettings.xml` and `xfwm4.xml` set |
 
 All standard XFCE panel plugins are included (`cpugraph`, `netload`, `weather`, `datetime`, `sensors`, `systemload`, etc.) to give users a complete panel configuration experience without requiring post-install package hunting.
 
@@ -134,6 +137,9 @@ Files placed in `flavors/xfce/skel/` are overlaid into `/etc/skel/` during the b
 This is the correct place for:
 
 - Default XFCE panel layout (via `xfce4/xfconf/` settings)
+- Panel profiles under `.local/share/xfce4-panel-profiles/`:
+  - `ShopnoOS 2.3`: the default layout. Shopno Menu, launchers, task list, Shopno Quick Settings (which also holds the tray icons), clock and show desktop.
+  - `ShopnoOS 2.0`: the same Shopno Menu with Xfce's standard System Tray and PulseAudio plugins. It stays until Quick Settings covers what the standard tray does (for example XEmbed tray icons).
 - Default Thunar bookmarks (`gtk-3.0/bookmarks` — shared with `brand/skel-branding/`)
 - IBus autostart configuration
 - Default terminal color scheme and profile
@@ -168,6 +174,7 @@ Until resolved, these `.deb` files will not be caught by `lint-packages.sh` and 
 | Profile | Edition | Notes |
 |---|---|---|
 | `shopno-os-desktop-xfce` | `desktop` | Standard user workstation |
+| `shopno-os-gaming-xfce` | `gaming` | The live session uses this flavor; installed systems log in to shopno-shell |
 
 To create a new profile using this flavor, copy `profiles/_template/` and set:
 
