@@ -7,11 +7,11 @@
 set -euo pipefail
 
 PACKAGE_NAME="xfce4-shopno-quicksettings-plugin"
-PACKAGE_VERSION="0.2.0"
+PACKAGE_VERSION="0.3.0"
 PACKAGE_ARCH="amd64"
 PACKAGE_DIST="debian13"
 # From the release's SHA256SUMS. Update together with PACKAGE_VERSION.
-PACKAGE_SHA256="aff47aa717f4512a3a7035fcd4961581ab2604da370ecc6eb214da4900eda4b0"
+PACKAGE_SHA256="da91453e2b345577cf86a45a214eddf53c518c256060c8bab829bddd1907ef1b"
 DOWNLOAD_URL="https://github.com/fa-saikat/xfce4-shopno-quicksettings-plugin/releases/download/v${PACKAGE_VERSION}/${PACKAGE_NAME}_${PACKAGE_VERSION}-1.${PACKAGE_DIST}_${PACKAGE_ARCH}.deb"
 
 PLUGIN_LIB="/usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libshopno-quicksettings.so"
